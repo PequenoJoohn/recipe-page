@@ -1,0 +1,258 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nutmeg: #854632;
+    --eggshell: #f3e6d8;
+    --white: #ffffff;
+    --light-grey: #e4ded8;
+    --rose-white: #fff5fa;
+    --dark-raspberry: #7b284f;
+    --dark-charcoal: #302d2c;
+    --wenge-brown: #5f574e;
+
+    --outfit: "Outfit", sans-serif;
+    --young: "Young Serif", serif;
+}
+
+body {
+    background-color: var(--eggshell);
+    width: 100%;
+    padding: 50px 0;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-grey);
+}
+
+main {
+    background-color: var(--white);
+    max-width: 620px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+
+}
+
+main img {
+    width: 100%;
+    max-width: 580px;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+}
+
+/* Title */
+
+.title {
+    max-width: 580px;
+    padding: 10px 0;
+}
+
+.title h1 {
+    font-size: 36px;
+    font-weight: 500;
+    font-family: var(--young);
+    color: var(--dark-charcoal);
+    padding-bottom: 1rem;
+}
+
+.title p {
+    font-size: 14px;
+    font-family: var(--outfit);
+    color: var(--dark-charcoal);
+
+}
+
+/* Preparation */
+
+.preparation {
+    max-width: 580px;
+    background-color: var(--rose-white);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 1.567rem 0;
+}
+
+.preparation h2 {
+    color: var(--dark-raspberry);
+    font-family: var(--outfit);
+}
+
+.preparation ul {
+    padding: 10px 20px 0 20px;
+}
+
+.preparation ul li {
+    padding-left: 20px;
+    font-family: var(--outfit);
+    line-height: 1.567rem;
+    color: var(--dark-charcoal);
+}
+
+.preparation ul li span {
+    font-weight: bold;
+    color: var(--wenge-brown);
+}
+
+/* Ingredients */
+
+.ingredients {
+    max-width: 580px;
+    padding: 0 20px 20px 20px;
+    border-radius: 8px;
+    margin: 1.567rem 0;
+}
+
+.ingredients h2 {
+    font-family: var(--young);
+    color: var(--nutmeg);
+}
+
+.ingredients ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 0 20px;
+    gap: 0.5rem;
+}
+
+.ingredients ul li {
+    padding-left: 20px;
+    font-family: var(--outfit);
+    line-height: 1.567rem;
+    color: var(--dark-charcoal);
+}
+
+/* Instructions */
+
+.instructions {
+    max-width: 580px;
+    padding: 0 20px 20px 20px;
+    border-radius: 8px;
+    margin: 1.567rem 0;
+}
+
+.instructions h2 {
+    font-family: var(--young);
+    color: var(--nutmeg);
+}
+
+.instructions ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px 0 20px;
+}
+
+.instructions ul li {
+    padding-left: 20px;
+    list-style: decimal;
+    font-family: var(--outfit);
+    color: var(--dark-charcoal);
+    font-weight: 300;
+}
+
+.instructions ul li::marker {
+    font-weight: bold;
+    color: var(--nutmeg);
+}
+
+.instructions ul li span {
+    color: var(--wenge-brown);
+    font-weight: bold;
+}
+
+/* Nutrition */
+
+.nutrition {
+    max-width: 580px;
+    padding: 0 20px 20px 20px;
+    border-radius: 8px;
+    margin: 1.567rem 0;
+}
+
+.nutrition h2 {
+    font-family: var(--young);
+    color: var(--nutmeg);
+    padding-bottom: 1rem;
+}
+
+.nutrition>p {
+    font-family: var(--outfit);
+    font-size: 14px;
+    padding-bottom: 1rem;
+    color: var(--dark-charcoal);
+}
+
+.nutrition .nutrition-values {
+    display: flex;
+    flex-direction: column;
+}
+
+.nutrition .nutrition-values div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--light-grey);
+    padding: 10px 0;
+}
+
+.nutrition .nutrition-values div:last-child {
+    border: none;
+}
+
+.nutrition .nutrition-values div p {
+    font-family: var(--outfit);
+    color: var(--dark-charcoal);
+}
+
+.nutrition .nutrition-values div p:first-child {
+    padding-left: 2rem;
+}
+
+.nutrition .nutrition-values div p:last-child {
+    max-width: 200px;
+    width: 100%;
+    color: var(--nutmeg);
+    font-weight: bold;
+}
+
+.attribution {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .title,
+    .ingredients,
+    .instructions,
+    .nutrition {
+        padding: 0 20px;
+    }
+
+    .preparation {
+        margin: 20px;
+    }
+
+    .line {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
